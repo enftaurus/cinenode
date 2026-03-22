@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Node - AI Movie Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header id="home-btn" style="cursor: pointer;" title="Go to Home">
+            <h1><i class="fa-solid fa-film"></i> Cine Node</h1>
+            <p>Discover Your Next Favorite Movie Using AI</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <i class="fa-solid fa-search search-icon"></i>
+                <input type="text" id="movie-search" placeholder="Type a movie name..." autocomplete="off">
+                <button id="search-btn">Recommend</button>
+            </div>
+            <ul id="autocomplete-list" class="autocomplete-list hidden"></ul>
+        </section>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Finding the absolute best matches...</p>
+        </div>
+
+        <div id="error-message" class="hidden" style="color: #ef4444; text-align: center; font-size: 1.2rem; margin-bottom: 2rem;"></div>
+
+        <section id="top-movies-section">
+            <div class="recommendations">
+                <h2 class="section-title">Top 50 Trending Movies</h2>
+                <div id="top-movies-grid" class="grid-container">
+                    <!-- content inserted via js -->
+                </div>
+            </div>
+            
+            <div class="recommendations" style="margin-top: 4rem;">
+                <h2 class="section-title">Available to Watch</h2>
+                <div id="watch-movies-grid" class="grid-container">
+                    <!-- content inserted via js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section" class="hidden">
+            <div class="searched-movie">
+                <h2 class="section-title">You Searched For</h2>
+                <div id="searched-movie-card" class="movie-card featured">
+                    <!-- content inserted via js -->
+                </div>
+            </div>
+
+            <div class="recommendations">
+                <h2 class="section-title">Top Handpicked Recommendations</h2>
+                <div id="recommendations-grid" class="grid-container">
+                    <!-- content inserted via js -->
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
