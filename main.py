@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 # Load data
-base_dir = r"C:\Users\vikra\cinenode"
+base_dir = r""
 movies_path = os.path.join(base_dir, "movies_cleaned.csv")
 sim_path = os.path.join(base_dir, "cosine_similarity.csv")
 
