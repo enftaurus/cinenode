@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 # Load data
-base_dir = "/home/rajababu/PyCharmMiscProject"
+base_dir = r"C:\Users\vikra\cinenode"
 movies_path = os.path.join(base_dir, "movies_cleaned.csv")
 sim_path = os.path.join(base_dir, "cosine_similarity.csv")
 
@@ -150,4 +150,4 @@ def serve_index():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=True)
